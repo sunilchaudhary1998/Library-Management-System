@@ -1,0 +1,135 @@
+<html>
+
+<head>
+    <title>www.csjk.medico.com</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/navv.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+</head>
+</head>
+
+<!-- ---------------------------------------- -->
+
+<div class="topnav">
+    <a class="active" href="/logout_drug">Logout</a>
+    <a href="/book_reg">Add New Book</a>
+    <a href="/member_reg">Add New Member</a>
+    <!-- <a href="/drug_availability">Availability</a> -->
+    <!-- <a href="/single_drug_info_check">Single Drug Info</a> -->
+    <!-- <a href="/generic_check">Generic Check</a> -->
+    <a href="/all_member_details">Member Details</a>
+    <a class="active" href="/index">Home</a>
+</div><br>
+
+
+<div style="vertical-align:top;font-size:20px">
+    <div style="color:black; text-align:right;">
+
+       
+        <img style="padding-right: 5px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+        " src="/static/images/blue.jpg">
+
+    </div>
+</div>
+
+<!-- --------------------------------------- -->
+
+
+<div class="modal fade" id="issueModal" tabindex="-1" role="dialog" aria-labelledby="issueModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="issueModalLabel">Issue Book</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Add your form fields or content here -->
+          <p>Enter details to issue the book.</p>
+          <fieldset style="background-color: white">
+            <form action="/member_insert" method="post">
+                <table border="1px">
+                    <tr>
+                        <br>
+                        <td>Member Name</td>
+                        <td><input type="text" name="Member_Name" required></td>
+                    </tr>
+                    <tr>
+                        <td>Book ID</td>
+                        <!-- <td><input type="number" name="Book_id" required></td> -->
+                        <td><input type="number" name="Book_id"></td>
+                    </tr>
+                    <tr>
+                        <td>Fees</td>
+                        <td><input type="number" step="0.01" name="Fees" required></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="Save"></td>
+                        <td><input type="reset" value="Refresh"></td>
+                    </tr>
+                </table>
+            </form>
+        </fieldset>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+
+
+<body>
+
+<marquee scrollamount="4" bgcolor="yellow" direction="up" hspace="500" behavior='slide' scrolldelay="">
+    <h3><b><center>Type of Book Stocks</center></b></h3></marquee>
+
+
+    <button onclick="importBooks()">Import Books</button>
+        <script>
+            function importBooks() {
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "/import_books", true);
+                xhr.send();
+            }
+            </script>
+
+
+    <br><br><br>
+
+    <table border="2px" style="margin: auto;">
+        <tr style="background-color: yellow;">
+            <th>Book Id</th>
+            <th>Book Title</th>
+            <th>Language Code</th>
+            <th>Publisher</th>
+            <th>Action</th>
+           <th>Issue Book</th>
+
+        </tr>
+        {% for book in book_list %}
+        <tr>
+            <td>{{ book.book_id }}</td>
+            <td>{{ book.title }}</td>
+            <td>{{ book.language_code }}</td>
+            <td>{{ book.publisher }}</td>
+         
+            <td>  <a href="/book_edit?id={{ book.book_id }}"><i class="fas fa-edit"></i></a> &nbsp;&nbsp;<a href="/book_delete?id={{ book.book_id }}"><i class="fas fa-trash-alt"></i> </a></td>
+
+            <td><button data-toggle="modal" data-target="#issueModal" > <i class="fas fa-plus" ></i></button> </td>
+
+
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+
+
+</html>

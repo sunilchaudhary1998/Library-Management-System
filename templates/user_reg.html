@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register Page</title>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/user.css')}}">
+    </head>
+    
+    <body>
+        <div class="wrapper">
+            <div class="logo">
+                <image src="{{url_for('static',filename='images/blue.jpg')}}">
+            </div>
+            
+            <form class="p-3 mt-3" action="/user_insert" method="post">                              
+
+                <div class="text-center mt-4 name">
+                    <label for="">Name</label>
+                </div>
+                <div class="form-field d-flex align-items-center">
+                    <span class="far fa-user"></span>
+                    <input type="text" name="name" id="name" placeholder="e.g Smita Sahu">
+                </div>
+
+                
+                <div class="text-center mt-4 name">
+                    <label for="">Phone No.</label>
+                </div>
+                <div class="form-field d-flex align-items-center">
+                    <span class="far fa-user"></span>
+                    <input type="tel" minlength="10" maxlength="10" name="number" id="number" placeholder="e.g +91-XXXXXXXXXX">
+                </div>
+
+
+                <div class="text-center mt-4 name">
+                    <label for="">Email</label>
+                </div>
+                <div class="form-field d-flex align-items-center">
+                    <span class="fas fa-key"></span>
+                    <input type="email" name="email" id="email" placeholder="e.g xyz@gmail.com">
+                </div>
+
+
+                <div class="text-center mt-4 name">
+                    <label for="">Password</label>
+                </div>
+                <div class="form-field d-flex align-items-center">
+                    <span class="fas fa-key"></span>
+                    <input type="password" name="password" id="password" placeholder="e.g Pass@123">
+                </div>
+
+                <button class="btn mt-3">Register</button>
+            </form>
+
+            <div class="text-center fs-6">
+                <br>
+                <label for="">Already have account</label>
+                <a href="/user_login">Login</a>
+                <br>Try again Later > <a href="/">Back to Home</a>  
+            </div>
+
+        </div>
+    </body>
+</html>

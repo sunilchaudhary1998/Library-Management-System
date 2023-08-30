@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Page</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='css/user.css')}}">
+    </head>
+
+    <body>
+        <form class="p-3 mt-3" action="/check_user_login" method="post">
+
+        <div class="wrapper">
+            <div class="logo">
+                <image src="{{url_for('static',filename='images/blue.jpg')}}">
+            </div>
+            
+            <br>
+            <div class="text-center mt-4 name">
+                <label for="">Email</label>
+            </div>
+
+            
+                <div class="form-field d-flex align-items-center">
+                    <span class="far fa-user"></span>
+                    <input type="email" name="email" id="email" placeholder="e.g xyz@gmail.com">
+                </div>
+
+
+                <br>
+                <div class="text-center mt-4 name">
+                    <label for="">Password</label>
+                </div>
+
+                <div class="form-field d-flex align-items-center">
+                    <span class="fas fa-key"></span>
+                    <input type="password" name="password" id="password" placeholder="e.g Pass@123">
+                </div>
+
+
+                <br>
+                <button class="btn mt-3">Login</button>
+            </form>
+            
+            
+            <div class="text-center fs-6">
+                <br>
+                <a href="/user_forget">Forget password?</a> 
+                <br>New User > <a href="/user_reg">Sign up</a>
+                <br>Try again Later > <a href="/">Back to Home</a>
+            </div>
+
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>www.csjk.medico.com</title>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/navv.css')}}">
+    </head>
+
+
+<!-- -------------------------------------------- -->
+
+<div class="topnav">
+    <a class="active" href="/logout_drug">Logout</a>
+    <a href="/all_book_details">Entire book Details</a>
+    <a class="active" href="/index">Home</a>
+    
+</div><br>
+
+
+
+<div style="vertical-align:top;font-size:20px">
+    <div style="color:black; text-align:right;">
+
+        <button style="background-color:green; height:73px; width:68px;"><h1 style="color:white">+</h1></button>   
+
+        <button style="background-color:#C21807"><h1 style="color:white">CSJK Medico</h1></button>
+
+
+        <button style="background-color:green; height:73px; width:68px;"><h1 style="color:white;">+</h1></button>
+
+        <br>
+        <marquee scrollamount="4" bgcolor="#E0CDEE" direction="right" hspace="" height="70px" width="40%" behavior='alternate'>
+        <pre><b>                     CHEMIST AND DRUGGIST</b></pre></marquee>
+             
+    </div>
+</div>
+    
+
+<body style="background-color: #E0CDEE">
+        
+        <marquee scrollamount="4" bgcolor="white" direction="up" hspace="500" behavior='slide' scrolldelay="">
+        <h3><b><center>welcome to Edit page</center></b></h3></marquee><br><br>
+        
+        
+        <br>
+        <fieldset style="background-color: white">
+            <form action="/book_update" method="post">
+                <table border="1px">
+                    <tr>
+                        <br>
+                        <td>Book id</td>
+                        <td><input type="number" name="Book_id" value="{{x[0][0]}}" readonly="readonly" style="background-color:#d1d1d1"></td>
+                    </tr>
+                    <tr>
+                        <td>Book Title</td>
+                        <td><input type="text" name="Book_title" value="{{x[0][1]}}"></td>
+                    </tr>
+                    <tr>
+                        <td>Language Code</td>
+                        <td><input type="text" name="Language_code" value="{{x[0][6]}}" ></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Publisher</td>
+                        <td><input type="text" name="Publisher" value="{{x[0][11]}}"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><input type="submit" value="Update"></td>
+                    </tr>
+                </table>
+                 </form>
+        </fieldset>
+    </body>
+
+   
+
+    
+    
+</html>

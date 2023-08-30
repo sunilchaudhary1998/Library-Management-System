@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Forget Password</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='css/user.css')}}">
+    </head>
+
+
+    <body>
+
+        <div class="wrapper">
+            <div class="logo">
+                <image src="{{url_for('static',filename='images/blue.jpg')}}">
+            </div>
+            
+            <form class="p-3 mt-3" method="post" action="/forget_user">
+        
+                <br>
+                <label for="">Enter Registered Email</label>
+                <div class="form-field d-flex align-items-center">
+                    <span class="far fa-user"></span>
+                    <input type="email" name="email" id="email" placeholder="e.g xyz@gmail.com">
+                </div>
+                
+                <br>
+                <label for="">Enter New Password</label>
+                <div class="form-field d-flex align-items-center">
+                    <span class="far fa-user"></span>
+                    <input type="password" name="password" id="password" placeholder="e.g Pass@123">
+                </div>
+
+                <br>
+                <p>Check Email before you proceed</p>
+                <button class="btn mt-3">Click here to Verify & Reset</button>
+            </form>
+
+            <br>
+            <div class="text-center fs-6">
+                Remember Password > 
+                <a href="/user_login">Login</a>
+                <br>Try again Later > <a href="/">Back to Home</a> 
+            </div> 
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Member Details - CSJK Medico</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/navv.css')}}">
+</head>
+<body style="background-color: #E0CDEE">
+
+<div class="topnav">
+    <a class="active" href="/logout_drug">Logout</a>
+    <a href="/all_member_details">Entire Member Details</a>
+    <a class="active" href="/index">Home</a>
+</div><br>
+
+<div style="vertical-align:top;font-size:20px; ">
+    <div style="color:black; text-align:right;">
+
+       
+        <img style="padding-right: 5px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+        " src="/static/images/blue.jpg">
+
+    </div>
+</div>
+<marquee scrollamount="4" bgcolor="yellow" direction="up" hspace="500" behavior='slide' scrolldelay="">
+    <h3><b><center>Edit Member </center></b></h3></marquee>
+
+<br>
+<fieldset style="background-color: white; margin-top: 10px;">
+    <form action="/member_update" method="post">
+        <table border="1px">
+            <tr>
+                <td>Member Id</td>
+                <td><input type="number" name="Member_Id" value="{{x[0][0]}}" readonly="readonly" style="background-color:#d1d1d1"></td>
+            </tr>
+            <tr>
+                <td>Member Name</td>
+                <td><input type="text" name="Member_Name" value="{{x[0][1]}}"></td>
+            </tr>
+            <tr>
+                <td>Book Id</td>
+                <td><input type="number" name="Book_id" value="{{x[0][2]}}"></td>
+            </tr>
+            <tr>
+                <td>Fees</td>
+                <td><input type="text" name="Fees" value="{{x[0][3]}}"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Update"></td>
+            </tr>
+        </table>
+    </form>
+</fieldset>
+
+
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <title>www.csjk.medico.com</title>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/navv.css')}}">
+    </head>
+
+<!-- -------------------------------------------- -->
+
+<div class="topnav">
+    <a class="active" href="/logout_drug">Logout</a>
+    <a href="/all_book_details">Entire books Details</a>
+    <a href="/drug_reg">Add New Drug</a>
+    <a href="/import_books">Import Books</a>
+    <a class="active" href="/index">Home</a>
+</div><br>
+
+
+<div style="vertical-align:top;font-size:20px">
+    <div style="color:black; text-align:right;">
+
+    <button style="background-color:green; height:73px; width:68px;"><h1 style="color:white">+</h1></button>   
+
+    <button style="background-color:#C21807"><h1 style="color:white">CSJK Medico</h1></button>
+
+
+    <button style="background-color:green; height:73px; width:68px;"><h1 style="color:white;">+</h1></button>
+
+    <br>
+    <marquee scrollamount="4" bgcolor="" direction="right" hspace="" height="70px" width="40%" behavior='alternate'>
+    <pre><b>                     CHEMIST AND DRUGGIST</b></pre></marquee>
+            
+    </div>
+</div>
+
+
+<!-- ------------------------- -->
+
+
+<body style="background-color:#ACDDDE ">
+        
+        <marquee scrollamount="4" bgcolor="white" direction="up" hspace="500" behavior='slide' scrolldelay="">
+        <center><h3><b>Type of Book Stocks</b></h3></marquee></center>
+
+        <button onclick="importBooks()">Import Books</button>
+        <script>
+            function importBooks() {
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "/import_books", true);
+                xhr.send();
+            }
+            </script>
+
+<br><br><br>     
+        <fieldset style="background-color: white">
+            <form>
+            <table border="1px">
+                <tr>
+                    <br>
+                    <td style="background-color: yellow;"><b>Book Id</b></td>
+                    <td style="background-color: yellow;"><b>Book Title</b></td>
+                    <td style="background-color: yellow;"><b>Language Code</b></td>
+                    <td style="background-color: yellow;"><b>Number Pages</b></td>
+                    <td style="background-color: yellow;"><b>Publication Date</b></td>
+                    <td style="background-color: yellow;"><b>Publisher</b></td>
+                    <td style="background-color: yellow;"><b>Book Quantity</b></td>
+                    <td style="background-color: yellow;"><b>Book Price</b></td>
+                    <td style="background-color: #98FB98;"><b>
+                        <center>Edit</center></b></td>
+                    <td style="background-color: #FF7F7F;"><b>
+                            <center>Delete</center></b></td>
+
+                    <td style="background-color:powderblue;"><b>
+                        <center>&#x2212</center></b></td>
+                    </tr>
+                {%for i in dt%}
+                
+                <tr>
+                    <td>{{i[0]}}</td>
+                    <td>{{i[1]}}</td>
+                    <td>{{i[2]}}</td>
+                    <td>{{i[3]}}</td>
+                    <td>{{i[4]}}</td>
+                    <td>{{i[5]}}</td>
+                    <td>{{i[6]}}</td>
+                    <td>{{i[7]}}</td>
+                    <td><button><a href="/book_edit?id={{i[0]}}">Edit</a></button></td>
+                    <td><button><a href="/book_delete?id={{i[0]}}">Delete</a></button></td>
+                    <td><button><a href="/book_minus_one?id={{i[0]}}">&#x2212</a></button></td>
+                </tr>
+                {% endfor %}
+            </table>
+
+           
+        </form>
+        </fieldset>
+        </body>
+        
+        
+
+
+        </html>
+

@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <title>www.csjk.medico.com</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/navv.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+
+<!-- ---------------------------------------- -->
+
+<div class="topnav">
+    <a class="active" href="/logout_drug">Logout</a>
+    <a href="/book_reg">Add New Book</a>
+    <a href="all_book_details">All Book Details</a>
+    <a href="/drug_availability">Availability</a>
+    <a href="/single_drug_info_check">Single Drug Info</a>
+    <a href="/generic_check">Generic Check</a>
+    <a class="active" href="/index">Home</a>
+</div><br>
+
+
+<div style="vertical-align:top;font-size:20px">
+    <div style="color:black; text-align:right;">
+
+       
+        <img style="padding-right: 5px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+        " src="/static/images/blue.jpg">
+
+    </div>
+</div>
+
+<!-- --------------------------------------- -->
+
+
+
+
+<body>
+
+
+<marquee scrollamount="4" bgcolor="yellow" direction="up" hspace="500" behavior='slide' scrolldelay="">
+    <h3><b><center>Member Details</center></b></h3></marquee>
+
+
+    
+
+    <br><br><br>
+
+    <table border="1px" style="margin: auto;">
+        <tr style="background-color: yellow;">
+            <th>Member Id</th>
+            <th>Member Name</th>
+            <th>Book Id</th>
+            <th>Fees</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        {% for member in member_list %}
+        <tr>
+            <td>{{ member.member_id }}</td>
+            <td>{{ member.member_name }}</td>
+            <td>{{ member.book_id }}</td>
+            <td>{{ member.fees }}</td>
+            <td><a href="/member_edit?id={{ member.member_id }}"><i class="fas fa-edit"></i></a></td>
+            <td><a href="/member_delete?id={{ member.member_id }}&book_id={{ member.book_id }}"><i class="fas fa-trash-alt"></i> </a></td>
+
+            
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+
+
+
+
+</html>
