@@ -5,5 +5,5 @@
 
 <br><br><br>
 
-<img width="960" alt="image" src="https://github.com/sunilchaudhary1998/Library-Management-System/assets/107506936/5144bff0-245d-4af0-875f-ff083c7b63a0">
+
 
