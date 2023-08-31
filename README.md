@@ -1,5 +1,13 @@
 # Library-Management-System
-1) to use this app click on library app option
+1) to use this app click on library app option.
+2) then user login screen will come login over there by using details, if dont have user data in dba then register, if forget password reset it.
+3) after login it will redirect to home page of app.
+4) there is button in home page to navigate to all details of books.
+5) in all details book there is function to import all books from API.
+6) in action option there function to edit details of books
+7) when click on issue book function that book will delete from all details screen and a pop will come you need to write details of memeber to whom u will issue bookand this book details will get into all member screen thus one book have been issued to member.
+8) member details funtion in navigation bar to see all member details.
+9) when you click on delete option in member details screen menans that book has been returned by member to libray so that member detail will deleted from this screen and that book id details will again can see from all books details screen.
 
 <img width="960" alt="image" src="https://github.com/sunilchaudhary1998/Library-Management-System/assets/107506936/605aa269-d596-48f1-8267-7decc36cfc1a">
 
