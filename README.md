@@ -91,9 +91,17 @@ __[ Home page of app ]__
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 __[ all books details SCreen ]__
-<img width="960" alt="image" src="https://github.com/sunilchaudhary1998/Library-Management-System/assets/107506936/82955c2e-b797-426f-81b5-6302ecb2586c">
+<img width="960" alt="image" src="https://github.com/sunilchaudhary1998/Library-Management-System/assets/107506936/264051de-d46c-40ea-86d3-262b9e88b70a">
+
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+__[Pop Up Screen]__
+
+<img width="960" alt="image" src="https://github.com/sunilchaudhary1998/Library-Management-System/assets/107506936/576d6483-cc86-4112-9a00-e8bc532e5662">
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 __[ all member details SCreen ]__
 <img width="960" alt="image" src="https://github.com/sunilchaudhary1998/Library-Management-System/assets/107506936/b6885c33-8af1-4ccf-a44e-09082a9df6e3">
