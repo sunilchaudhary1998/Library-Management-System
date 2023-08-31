@@ -12,7 +12,8 @@
 8) member details funtion in navigation bar to see all member details.
 9) when you click on delete option in member details screen menans that book has been returned by member to libray so that member detail will deleted from this screen and that book id details will again can see from all books details screen.
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------__Data Base Configuration :-__
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+__Data Base Configuration :-__
 
 ---for login user data
 ---info Table
@@ -43,6 +44,7 @@ CREATE TABLE [All_books](
 	[is_deleted] [int],
 	[is_issued] [int] 
 ); 
+
 
 --------------------------------------------------------------------------------------------------------------------
 ---ALL member who took books their details saved here
