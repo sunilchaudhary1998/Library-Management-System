@@ -42,7 +42,8 @@ __Data Base Configuration :-__     -----------(make sure you use Microsoft sql s
 ---__for login user data__
 ---__info Table__
 
-CREATE TABLE [info](
+CREATE TABLE info
+(
 	[Name] [varchar](30),
 	[Number] [bigint],
 	[Email] [varchar](30),
@@ -54,7 +55,8 @@ CREATE TABLE [info](
 ---__ALL books data will store here from APi__
 ---__All_books__
 
-CREATE TABLE [All_books](
+CREATE TABLE All_books
+(
 	[Book_id] [int] IDENTITY(1,1),
 	[title] [varchar](100),
 	[authors] [varchar](500),
@@ -76,7 +78,8 @@ CREATE TABLE [All_books](
 ---__ALL member who took books their details saved here__
 ---__Member__
 
-CREATE TABLE [Member](
+CREATE TABLE Member
+(
 	[Member_Id] [int] IDENTITY(1,1),
 	[Member_Name] [varchar](100),
 	[Book_id] [int],
