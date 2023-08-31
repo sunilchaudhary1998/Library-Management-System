@@ -37,6 +37,8 @@ __Technology Used :-__
 3) And now that book id details will again can see from all books details screen that means book has been arrived at Libray again.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+~~~
 __Data Base Configuration :-__     -----------(make sure you use Microsoft sql server for data storage)
 
 ---__for login user data__
@@ -73,7 +75,7 @@ CREATE TABLE All_books
 	[is_issued] [int] 
 ); 
 
-
+~~~
 
 ---__ALL member who took books their details saved here__
 ---__Member__
