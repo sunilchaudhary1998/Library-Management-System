@@ -36,13 +36,6 @@ def logout_drug():
 def main():
    return render_template('main.html')
 
-#---
-# #----about (medico kundli)
-# @app.route('/about')
-# def about():
-#        return render_template('about.html')
-#---
-  
 
 
 #----index (home off app)
@@ -66,15 +59,6 @@ def all_member_details():
    return render_template('all_member_details.html',member_list=a)
 
 
-
-
-# #----drug type
-# @app.route("/book_type")
-# def drug_type():
-#    b = sel_book_type()
-#    return render_template('book_type.html',dt=b)
-
-
 #----no
 @app.route('/not')                                   
 def nott():
@@ -85,8 +69,6 @@ def nott():
 # @app.route('/yes')                                  
 # def yes():
 #    return render_template('yes.html')
-
-
 
 
 #----reg drug (adding new book in reg page)
@@ -167,25 +149,7 @@ def import_books():
     
     return redirect('/all_book_details')
 
-    
 
-
-# #----log   for drug find (drug availability page)
-# @app.route('/drug_availability')                                      
-# def drug_availability():
-#    return render_template('drug_availability.html')
-
-
-# #----particular medicine  [will check a particular drug present / not]
-# @app.route('/drug_availability_check',methods=['post'])              
-# def drug_availability_check():
-#    name = request.form['name']
-#    t = (name,)
-#    t1 = check_drug_avail(name)
-#    if t in t1:
-#       return redirect('/yes')
-#    else:
-#       return redirect('/not')
 
 
 #----particular drug chaeck page
@@ -214,38 +178,6 @@ def single_drug_data_check():
         return redirect("/single_drug_info")
     else:
         return redirect("/not")
-
-
-
-# #----generic check page
-# @app.route("/generic_check")                                  
-# def generic_check():
-#    return render_template("generic_check.html")
-   
-
-
-# #-----drug list by generic name full
-# @app.route("/generic_list")                                  
-# def generic_list():
-#    y = sel_generic(c["j"][0])
-#    return render_template("generic_list.html",M=y)
-
-         
-
-
-# #-----generic check process in back end
-# @app.route("/generic_check_process",methods = ["post"])              
-# def generic_check_process():
-#     generic = request.form["generic"]
-#     t = (generic,)
-#     t1 = check_generic(generic)
-#     if t in t1:
-#         c["j"]=t                                         #extend method in list
-#         return redirect('/generic_list')
-#     else:
-#         return redirect("/not")        
-
-
 
 
 
@@ -304,22 +236,6 @@ def member_delete():
    book_id = request.args.get("book_id")
    delete_member(member_id,book_id)
    return redirect("/all_member_details")
-
-
-
-
-# #----drug minus one
-# @app.route("/book_minus_one")                             
-# def drug_minus_one():
-#    id = request.args.get("id")
-#    minus_one_book(id)
-#    return redirect("/book_type")
-
-
-
-
-
-
 
 
 
