@@ -39,10 +39,10 @@ __Technology Used :-__
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ~~~
-__Data Base Configuration :-__     -----------(make sure you use Microsoft sql server for data storage)
+Data Base Configuration :-     -----------(make sure you use Microsoft sql server for data storage)
 
----__for login user data__
----__info Table__
+---for login user data
+---info Table
 
 CREATE TABLE info
 (
@@ -54,8 +54,8 @@ CREATE TABLE info
 
 
 
----__ALL books data will store here from APi__
----__All_books__
+---ALL books data will store here from APi
+---All_books
 
 CREATE TABLE All_books
 (
