@@ -7,7 +7,7 @@ CREATE TABLE [info](
 	[Number] [bigint],
 	[Email] [varchar](30),
 	[Password] [varchar](30)
-)
+);
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -28,7 +28,7 @@ CREATE TABLE [All_books](
 	[publisher] [varchar](100),
 	[is_deleted] [int],
 	[is_issued] [int] 
-) 
+); 
 
 --------------------------------------------------------------------------------------------------------------------
 ---ALL member who took books their details saved here
@@ -38,5 +38,5 @@ CREATE TABLE [Member](
 	[Member_Name] [varchar](100),
 	[Book_id] [int],
 	[Fees] [decimal](10, 2)
-	)
+	);
 ----------------------------------------------------------------------------------------------------------------
