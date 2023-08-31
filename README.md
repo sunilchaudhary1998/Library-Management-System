@@ -20,17 +20,19 @@
 
 <br><br><br>
 
+-----[ Home page of app ]----------
 <img width="960" alt="image" src="https://github.com/sunilchaudhary1998/Library-Management-System/assets/107506936/66978171-5426-462f-8ffc-23509e911ec5">
 
 <br><br><br>
 
-
+-----[ all books details SCreen ]----------
 <img width="960" alt="image" src="https://github.com/sunilchaudhary1998/Library-Management-System/assets/107506936/82955c2e-b797-426f-81b5-6302ecb2586c">
 
 
 
 <br><br><br>
 
+-----[ all member details SCreen ]----------
 <img width="960" alt="image" src="https://github.com/sunilchaudhary1998/Library-Management-System/assets/107506936/b6885c33-8af1-4ccf-a44e-09082a9df6e3">
 
 
