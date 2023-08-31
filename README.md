@@ -2,8 +2,8 @@
 
 __Technology Used :-__ 
 
-__Microsoft SQL Server,
-HTML, 
+1) __Microsoft SQL Server__,
+2) HTML, 
 BootStrap, 
 CSS, 
 Python, 
