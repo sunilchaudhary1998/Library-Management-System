@@ -93,10 +93,11 @@ CREATE TABLE Member
 ~~~
 
 
-
+~~~
 __[ Initial Screen of Library Management APP ]__
 
 1) To use this app click on library app option.
+~~~
 
 <img width="960" alt="image" src="https://github.com/sunilchaudhary1998/Library-Management-System/assets/107506936/605aa269-d596-48f1-8267-7decc36cfc1a">
 
