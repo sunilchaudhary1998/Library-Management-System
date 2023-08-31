@@ -17,6 +17,7 @@ __Data Base Configuration :-__
 
 ---for login user data
 ---info Table
+
 CREATE TABLE [info](
 	[Name] [varchar](30),
 	[Number] [bigint],
@@ -28,6 +29,7 @@ CREATE TABLE [info](
 
 ---ALL books data will store here from APi
 ---All_books
+
 CREATE TABLE [All_books](
 	[Book_id] [int] IDENTITY(1,1),
 	[title] [varchar](100),
@@ -49,6 +51,7 @@ CREATE TABLE [All_books](
 
 ---ALL member who took books their details saved here
 ---Member
+
 CREATE TABLE [Member](
 	[Member_Id] [int] IDENTITY(1,1),
 	[Member_Name] [varchar](100),
