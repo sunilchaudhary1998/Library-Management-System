@@ -39,6 +39,7 @@ __Technology Used :-__
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ~~~
+
 Data Base Configuration :-     -----------(make sure you use Microsoft sql server for data storage)
 
 ---for login user data
@@ -52,7 +53,7 @@ CREATE TABLE info
 	[Password] [varchar](30)
 );
 
-
+-----------------------------------------------------------------------------------------------------------
 
 ---ALL books data will store here from APi
 ---All_books
@@ -73,12 +74,12 @@ CREATE TABLE All_books
 	[publisher] [varchar](100),
 	[is_deleted] [int],
 	[is_issued] [int] 
-); 
+);
 
-~~~
+-----------------------------------------------------------------------------------------------------------
 
----__ALL member who took books their details saved here__
----__Member__
+---ALL member who took books their details saved here
+---Member
 
 CREATE TABLE Member
 (
@@ -88,7 +89,8 @@ CREATE TABLE Member
 	[Fees] [decimal](10, 2)
 	);
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+~~~
 
 
 
