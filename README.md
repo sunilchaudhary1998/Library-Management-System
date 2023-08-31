@@ -2,13 +2,13 @@
 
 __Technology Used :-__ 
 
-1) __Microsoft SQL Server__,
-2) HTML, 
-BootStrap, 
-CSS, 
-Python, 
-FLask, 
-JavaSCript__
+1) __Microsoft SQL Server__
+2) __HTML__
+3) __BootStrap__
+4) __CSS__
+5) __Python__
+6) __FLask__
+7) __JavaSCript__
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
