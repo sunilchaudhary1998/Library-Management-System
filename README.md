@@ -23,7 +23,7 @@ __Technology Used :-__
 9) when you click on delete option in member details screen menans that book has been returned by member to libray so that member detail will deleted from this screen and that book id details will again can see from all books details screen.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-__Data Base Configuration :-__
+__Data Base Configuration :-__     -----------(make sure you use Microsoft sql server for data storage)
 
 ---__for login user data__
 ---__info Table__
