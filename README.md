@@ -12,15 +12,29 @@ __Technology Used :-__
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-1) to use this app click on library app option.
-2) then user login screen will come login over there by using details, if dont have user data in dba then register, if forget password reset it.
-3) after login it will redirect to home page of app.
-4) there is button in home page to navigate to all details of books.
-5) in all details book there is function to import all books from API.
-6) in action option there function to edit details of books
-7) when click on issue book function that book will delete from all details screen and a pop will come you need to write details of memeber to whom u will issue bookand this book details will get into all member screen thus one book have been issued to member.
-8) member details funtion in navigation bar to see all member details.
-9) when you click on delete option in member details screen menans that book has been returned by member to libray so that member detail will deleted from this screen and that book id details will again can see from all books details screen.
+1) To use this app click on library app option.
+   
+1) Then user login screen will come
+2) login over there by using details
+   
+1) if you dont have an account then register,
+2) if you forgot password you can reset it.
+
+1) After login You will redirect to home page of app.
+2) There is a button in home page to navigate to all details page.
+
+1) in all book details page there is a button to import all books from API.
+2) in action button there is a function to edit details of books.
+   
+1) when click on issue book button book will get deleted from all book details screen and a pop will come
+2) you need to fill a form to whom you want issue this book
+3) details will get into all member screen thus one book have been issued to member.
+4) thus that book will get deleted from this screen
+5) click on member details button in navigation bar to see all member details. to whom book has been issued.
+
+1) when you click on delete option in member details screen record will delete this means that book has been returned by member to libray.
+2) so that member details will get deleted from this screen.
+3) And now that book id details will again can see from all books details screen that means book has been arrived at Libray again.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 __Data Base Configuration :-__     -----------(make sure you use Microsoft sql server for data storage)
