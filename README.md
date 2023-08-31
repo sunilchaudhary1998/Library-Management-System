@@ -1,6 +1,16 @@
 # Library-Management-System
 
-[ Technology Used :- HTML, BootStrap, CSS, Python, FLask, JavaSCript, Microsoft SQL Server. ]
+__Technology Used :-__ 
+
+__Microsoft SQL Server,
+HTML, 
+BootStrap, 
+CSS, 
+Python, 
+FLask, 
+JavaSCript__
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 1) to use this app click on library app option.
 2) then user login screen will come login over there by using details, if dont have user data in dba then register, if forget password reset it.
