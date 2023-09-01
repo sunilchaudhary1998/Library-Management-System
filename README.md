@@ -165,7 +165,8 @@ CREATE TABLE Member
 3) so that member details will get deleted from this screen.
 4) And now that book id details will again can see from all books details screen that means book has been arrived at Libray again.
 ~~~
-<img width="960" alt="image" src="https://github.com/sunilchaudhary1998/Library-Management-System/assets/107506936/b6885c33-8af1-4ccf-a44e-09082a9df6e3">
+<img width="960" alt="image" src="https://github.com/sunilchaudhary1998/Library-Management-System/assets/107506936/78f24684-2cb1-4cc5-a963-4a990738a865">
+
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ~~~
