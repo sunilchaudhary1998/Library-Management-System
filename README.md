@@ -9,6 +9,17 @@ https://drive.google.com/file/d/1_HNBVmLkCWLJ5xyCOBL3wEOC4E0pnVjd/view?usp=drive
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+
+• This App Store the Information related to different kind of Books that are present in The Library. 
+
+• It is a Web Based Application for saving details of new New Book arrived in the shop aur can be used to import Books from API link. 
+
+• As well as can be used to search for Whether a Books is present or not available in shop.
+
+• It store details of members whom Books have been issued at Rent.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 __Technology Used :-__ 
 
 1) __Microsoft SQL Server__
