@@ -1,3 +1,5 @@
+# Just Run This file in sql server once and forget it:-
+
 
 ---data base 
 create database Library
