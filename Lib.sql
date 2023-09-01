@@ -33,8 +33,8 @@ CREATE TABLE [All_books](
 	[text_reviews_count] [int],
 	[publication_date] [date],
 	[publisher] [varchar](100),
-	[is_deleted] [int],
-	[is_issued] [int] 
+	[is_deleted] [int] DEFAULT 0,
+	[is_issued] [int] DEFAULT 0
 ); 
 
 --------------------------------------------------------------------------------------------------------------------
