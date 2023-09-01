@@ -175,7 +175,9 @@ CREATE TABLE Member
 ~~~
 <img width="960" alt="image" src="https://github.com/sunilchaudhary1998/Library-Management-System/assets/107506936/cae2af1e-5589-4547-a915-956da184e42a">
 
-
+~~~
+Note :- Type the Spelling of Book Properly to Search
+~~~
 <img width="960" alt="image" src="https://github.com/sunilchaudhary1998/Library-Management-System/assets/107506936/3b0ba8c9-f65b-4857-9562-f29c2dc28d75">
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
