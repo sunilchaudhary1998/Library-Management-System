@@ -66,8 +66,7 @@ CREATE TABLE info
 ---ALL books data will store here from APi
 ---All_books
 
-CREATE TABLE All_books
-(
+CREATE TABLE [All_books](
 	[Book_id] [int] IDENTITY(1,1),
 	[title] [varchar](100),
 	[authors] [varchar](500),
@@ -80,9 +79,9 @@ CREATE TABLE All_books
 	[text_reviews_count] [int],
 	[publication_date] [date],
 	[publisher] [varchar](100),
-	[is_deleted] [int],
-	[is_issued] [int] 
-);
+	[is_deleted] [int] DEFAULT 0,
+	[is_issued] [int] DEFAULT 0
+); 
 
 -----------------------------------------------------------------------------------------------------------
 
