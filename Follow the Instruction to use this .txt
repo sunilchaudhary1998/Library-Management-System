@@ -1,0 +1,86 @@
+Follow the Instruction to use this app :-
+
+1) Install :- Microsoft SQL Server (developer version)
+   link to install :- https://www.microsoft.com/en-in/sql-server/sql-server-downloads
+
+==========================================================================================================================================
+   
+2) Install :- Microsoft SQL Server Management Studio
+   link to install :- https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16
+
+==========================================================================================================================================
+
+3) open sql server :-
+
+   Execute below provided query :-
+
+
+   
+
+---for login user data
+---info Table
+CREATE TABLE [info](
+	[Name] [varchar](30),
+	[Number] [bigint],
+	[Email] [varchar](30),
+	[Password] [varchar](30)
+)
+
+----------------------------------------------------------------------------------------------------------
+
+---ALL books data will store here from APi
+---All_books
+CREATE TABLE [All_books](
+	[Book_id] [int] IDENTITY(1,1),
+	[title] [varchar](100),
+	[authors] [varchar](500),
+	[average_rating] [decimal](10, 2),
+	[isbn] [varchar](500),
+	[isbn13] [varchar](500),
+	[language_code] [varchar](50),
+	[num_pages] [int],
+	[ratings_count] [int],
+	[text_reviews_count] [int],
+	[publication_date] [date],
+	[publisher] [varchar](100),
+	[is_deleted] [int],
+	[is_issued] [int] 
+) 
+
+--------------------------------------------------------------------------------------------------------------------
+---ALL member who took books their details saved here
+---Member
+CREATE TABLE [Member](
+	[Member_Id] [int] IDENTITY(1,1),
+	[Member_Name] [varchar](100),
+	[Book_id] [int],
+	[Fees] [decimal](10, 2)
+	)
+
+
+==========================================================================================================================================
+
+4) install python 
+   then go c drive where python folder has been installed
+   then inside python folder go to script folder
+   then right click on directory / command interpreter
+   type cmd and enter
+   then in cmd :- install all the pip one by one, just copy query and execute in cmd
+   ---> pip install flask
+   ---> pip install datetime
+   ---> pip install requests
+   ---> pip install pypyodbc
+
+
+ ==========================================================================================================================================
+
+5) Note :- in my_database.py file 
+           there is a function :- connect over there 
+           make sure to change your server name 
+           you will get it from sql sever while connecting it
+           Server = 'LAPTOP-Q9O8INGS\SQLEXPRESS'
+
+   
+   
+
+
