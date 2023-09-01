@@ -177,7 +177,7 @@ CREATE TABLE Member
 
 ~~~
 
-___Note :- Type the Spelling of Book Properly to Search sown below___
+Note :- Type the Spelling of Book Properly to Search sown below
 
 ~~~
 <img width="960" alt="image" src="https://github.com/sunilchaudhary1998/Library-Management-System/assets/107506936/3b0ba8c9-f65b-4857-9562-f29c2dc28d75">
