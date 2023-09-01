@@ -42,6 +42,14 @@ __Technology Used :-__
 
 Data Base Configuration :-     -----------(make sure you use Microsoft sql server for data storage)
 
+---to make data base
+
+create database Library
+use Library
+
+
+--------------------------------------------------------------------------------------------------------
+
 ---for login user data
 ---info Table
 
