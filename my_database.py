@@ -5,7 +5,6 @@ import pypyodbc as odbc
 
 
 
-
 def connect():
     DRIVER = 'SQL Server'
     database = 'Library'
@@ -19,17 +18,58 @@ def connect():
                         Database={database};
                         Port={Port}''')
 
+#-------------------------------------------------------------------------------------------------
+
+#---insert book (manual)
+def insert_book(book_data_tuple):
+    con = connect()
+    cur = con.cursor()
+    sql = '''INSERT INTO All_books (Title, Authors, Average_Rating, 
+                                    ISBN, ISBN13, Language_Code, Num_Pages, 
+                                    Ratings_Count, Text_Reviews_Count, Publication_Date, 
+                                    Publisher) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'''
+    cur.execute(sql, book_data_tuple)
+    con.commit()
+    cur.close()
+    con.close()
+
+
+#---check book
+def check_book_avail(title):
+    con = connect()  
+    cur = con.cursor()  
+    sql = 'SELECT title FROM All_books WHERE title = ?'  
+    cur.execute(sql, (title,))  
+    data = cur.fetchall()  
+    cur.close()  
+    con.close()
+    if data:
+        return data[0][0]
+    else:
+        return None
+    
+
+
+#---single book details
+def sel_single_book(title):                                          
+    con = connect()
+    cur = con.cursor()
+    sql = "select * from all_books where title=? and is_deleted=0 and is_issued=0"
+    # sql = 'select * from drugs where name="?"%'
+    cur.execute(sql,(title,))
+    data=cur.fetchall()
+    con.commit()
+    cur.close()
+    con.close() 
+    print(data)
+    return data
 
 
 
-
-#----insert member
+#----insert member 
 def insert_member(member_data):
     con = connect()
     cur = con.cursor()
-    # sql_1 = "ALTER TABLE Books AUTO_INCREMENT = 1"
-    # cur.execute(sql_1)
-    # con.commit()
     sql1 = "INSERT INTO Member (Member_Name, Book_id, Fees) VALUES (?, ?, ?)"
     cur.execute(sql1,member_data)
     sql2 = "Update All_books set is_issued=1 where Book_id=?"
@@ -133,7 +173,7 @@ def update_member(t):
 
 
 
-# delete book
+# delete book / issue book
 def delete_book(id):
     con = connect()
     cur = con.cursor()
@@ -145,7 +185,7 @@ def delete_book(id):
     con.close()
 
 
-# Delete a book record by Book_id
+# Delete member / means book has been returned to library
 def delete_member(member_id,book_id):
     con = connect()
     cur = con.cursor()
@@ -156,8 +196,6 @@ def delete_member(member_id,book_id):
     con.commit()
     cur.close()
     con.close()
-
-
 
 
 #---------------------------------------------[User]------------------------------------------------------------------------------------

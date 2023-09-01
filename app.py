@@ -2,16 +2,14 @@
 from flask import *
 from my_database import *
 
-import requests
+import requests        
 from datetime import datetime
 
 
 app = Flask(__name__)
 
 
-
-
-#-----------------[book data]---------------------------------------------------------------------------------------------------------------
+#-----------------[book data]---------------------------------------------------------------------------
 
 d = {}
 c = {}
@@ -36,6 +34,13 @@ def logout_drug():
 def main():
    return render_template('main.html')
 
+#---
+# #----about (medico kundli)
+# @app.route('/about')
+# def about():
+#        return render_template('about.html')
+#---
+  
 
 
 #----index (home off app)
@@ -65,12 +70,6 @@ def nott():
    return render_template('not.html')         
 
 
-# #----yes
-# @app.route('/yes')                                  
-# def yes():
-#    return render_template('yes.html')
-
-
 #----reg drug (adding new book in reg page)
 @app.route('/book_reg')                                      
 def drug_reg():
@@ -83,20 +82,8 @@ def member_reg():
    return render_template('member_reg.html')  
 
 
-# #----register book (will add new book to database)
-# @app.route('/book_insert',methods=['post'])                 
-# def drug_insert():
-#    Book_title = request.form['Book_title']
-#    Language_code = request.form['Language_code']
-#    Num_pages = request.form['Num_pages']
-#    Publication_date = request.form['Publication_date']
-#    Publisher = request.form['Publisher']
-#    Book_quantity = request.form['Book_quantity'] 
-#    Book_price = request.form['Book_price']   
-#    t = (Book_title,Language_code,Num_pages,Publication_date,Publisher,Book_quantity,Book_price)
-#    insert_book(t)
-#    return redirect('/book_reg') 
 
+#-----------------------------[insert]---------------------------------------------------
 
 #----member insert
 @app.route('/member_insert', methods=['POST'])
@@ -106,7 +93,34 @@ def member_insert():
     Fees = float(request.form['Fees'])  
     member_data = (Member_Name, Book_id, Fees)
     insert_member(member_data)  
-    return redirect('/member_reg')
+    return redirect('/all_member_details')
+
+
+
+#---manual insert of book details
+@app.route('/book_insert', methods=['POST'])
+def book_insert():
+    
+   title = request.form['title']
+   authors = request.form['authors']
+   average_rating = float(request.form['average_rating'])
+   isbn = request.form['isbn']
+   isbn13 = request.form['isbn13']
+   language_code = request.form['language_code']
+   num_pages = int(request.form['num_pages'])
+   ratings_count = int(request.form['ratings_count'])
+   text_reviews_count = int(request.form['text_reviews_count'])
+   publication_date = request.form['publication_date']
+   publisher = request.form['publisher']
+
+   book_data_tuple = (title, authors, average_rating, isbn, isbn13, language_code, num_pages,
+               ratings_count, text_reviews_count, publication_date, publisher)
+
+   insert_book(book_data_tuple)
+
+   return redirect('/all_book_details')  
+
+
 
 
 
@@ -149,36 +163,43 @@ def import_books():
     
     return redirect('/all_book_details')
 
+    
 
 
+#-----------------------[check / single info fetch]----------------------------------------------------
 
 #----particular drug chaeck page
-@app.route("/single_drug_info_check")                                  
-def single_drug_info_check():
-   return render_template("single_drug_info_check.html")
+@app.route("/single_book_info_check")                                  
+def single_book_info_check():
+   return render_template("single_book_info_check.html")
+
 
 
 #----particular drug details full
-@app.route("/single_drug_info")                                  
-def single_drug_info():
-   if "i" in d:
-        x = sel_single_drug(d["i"][0])
-        return render_template("single_drug_info.html",i=x)
+@app.route("/single_book_info")                                  
+def single_book_info():
+    if "i" in d:
+        x = sel_single_book(d["i"])
+        return render_template("single_book_info.html", ic=x)
+    
 
 
-
-#----particular medicine  [with details]
-@app.route("/single_drug_data_check",methods = ["post"])              
-def single_drug_data_check():
-    name = request.form["name"]
-    t = (name,)
-    t1 = check_drug_avail(name)
-    if t in t1:
-        d["i"] = t                                          #add operatin of dick
-        return redirect("/single_drug_info")
+#----particular book  [with details]
+@app.route("/single_book_data_check", methods=["post"])
+def single_book_data_check():
+    title = request.form["title"]
+    t = title
+    t1 = check_book_avail(title)
+    if t1 is not None:  
+        if t in t1:
+            d["i"] = t  
+            return redirect("/single_book_info")  
     else:
         return redirect("/not")
 
+
+
+#---------------[edit / update]----------------------------------------------------------------------
 
 
 #----book edit
@@ -188,12 +209,6 @@ def book_edit():
    data = edit_book(Book_id)
    return render_template("book_edit.html",x=data)
 
-#----member edit
-@app.route("/member_edit")                                  
-def member_edit():
-   member_id = request.args.get("id")
-   data = edit_member(member_id)
-   return render_template("member_edit.html",x=data)
 
 
 #----book update
@@ -206,6 +221,15 @@ def book_update():
    t = (Book_title,Language_code,Publisher,Book_id)
    update_book(t)
    return redirect("/all_book_details")
+
+
+
+#----member edit
+@app.route("/member_edit")                                  
+def member_edit():
+   member_id = request.args.get("id")
+   data = edit_member(member_id)
+   return render_template("member_edit.html",x=data)
 
 
 #----member update
@@ -221,13 +245,14 @@ def member_update():
     return redirect("/all_member_details")
 
 
+#-----------------------------------[delete] or [issue]-----------------------------------------------
 
 #----book delete
 @app.route("/book_delete")                             
 def drug_delete():
    id = request.args.get("id")
    delete_book(id)
-   return redirect("/all_book_details")
+   return redirect("/member_reg")
 
 #----member delete
 @app.route("/member_delete")                             
@@ -236,6 +261,7 @@ def member_delete():
    book_id = request.args.get("book_id")
    delete_member(member_id,book_id)
    return redirect("/all_member_details")
+
 
 
 
