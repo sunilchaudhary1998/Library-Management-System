@@ -1,7 +1,8 @@
 
 <html>
     <head>
-        <title>www.csjk.medico.com</title>   
+        <title>www.csjk.medico.com</title>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/middle logo.css')}}">  
     </head>
 
 
@@ -11,9 +12,13 @@
 <h3><pre><i>>> To use this App please Follow the instruction below &#8595 &#8595 &#8595</i></pre></h3>
 
 <br>
-<center><b style="color:#8A0707;"><h3>[click on the</b> <u style="color:navy;">Library App Logo</u> <b style="color:#8A0707;">that will act as Button]</b></center>
+<!-- <center><b style="color:#8A0707;">
+    <h3>[click on the</b> <u style="color:navy;">Library App Logo</u> 
+        <b style="color:#8A0707;">that will act as Button]</b>
+</center> -->
 
 
+  
 <!-- ---------------------------- -->
     
 <br>
@@ -21,10 +26,17 @@
 <body style="background-color:#48BF91"> 
     
         
-      
+    <div class="logo-button-container">
+        <img class="logo-image" src="/static/images/blue.jpg">
+        <p class="instruction-text"><b style="color:navy;">[click on the Library App Logo that will act as Button]</b></p>
+        <button><a href="/user_login">Library App</a></button>
+    </div>
 
 
-        <pre><h1><b><center><button style='height:30px'><a href="/user_login">Library App</a></button></center></b></h1></pre>
+        <!-- <pre>
+
+            <h1><b><center><button style='height:30px'><a href="/user_login">Library App</a></button></center></b></h1>
+        </pre> -->
 
         
 

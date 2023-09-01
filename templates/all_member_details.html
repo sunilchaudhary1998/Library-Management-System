@@ -11,11 +11,8 @@
 
 <div class="topnav">
     <a class="active" href="/logout_drug">Logout</a>
-    <a href="/book_reg">Add New Book</a>
+    <!-- <a href="/book_reg">Add New Book</a> -->
     <a href="all_book_details">All Book Details</a>
-    <a href="/drug_availability">Availability</a>
-    <a href="/single_drug_info_check">Single Drug Info</a>
-    <a href="/generic_check">Generic Check</a>
     <a class="active" href="/index">Home</a>
 </div><br>
 
@@ -25,7 +22,7 @@
 
        
         <img style="padding-right: 5px;
-            height: 80px;
+            height: 150px;
             object-fit: cover;
             border-radius: 50%;
         " src="/static/images/blue.jpg">
@@ -38,7 +35,7 @@
 
 
 
-<body>
+<body style="background-color: #00FFFF">
 
 
 <marquee scrollamount="4" bgcolor="yellow" direction="up" hspace="500" behavior='slide' scrolldelay="">
@@ -48,8 +45,9 @@
     
 
     <br><br><br>
-
-    <table border="1px" style="margin: auto;">
+    <fieldset style="background-color: white">
+        <form>
+        <table border="1px">
         <tr style="background-color: yellow;">
             <th>Member Id</th>
             <th>Member Name</th>
@@ -71,6 +69,8 @@
         </tr>
         {% endfor %}
     </table>
+    </form>
+    </fieldset>
 </body>
 
 

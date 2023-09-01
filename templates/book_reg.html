@@ -11,29 +11,24 @@
 <div class="topnav">
     <a class="active" href="/logout_drug">Logout</a>
     <a href="/all_book_details">Entire books Details</a>
-    <a href="/drug_availability">Availability</a>
     <a class="active" href="/index">Home</a>
     
 </div><br>
 
 
-
 <div style="vertical-align:top;font-size:20px">
     <div style="color:black; text-align:right;">
 
-    <button style="background-color:green; height:73px; width:68px;"><h1 style="color:white">+</h1></button>   
+       
+        <img style="padding-right: 5px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+        " src="/static/images/blue.jpg">
 
-    <button style="background-color:#C21807"><h1 style="color:white">CSJK Medico</h1></button>
-
-
-    <button style="background-color:green; height:73px; width:68px;"><h1 style="color:white;">+</h1></button>
-
-    <br>
-    <marquee scrollamount="4" bgcolor="" direction="right" hspace="" height="70px" width="40%" behavior='alternate'>
-    <pre><b>                     CHEMIST AND DRUGGIST</b></pre></marquee>
-         
     </div>
 </div>
+
 
 <!-- --------------------------------------------- -->
 
@@ -47,54 +42,67 @@
 <br><br><br><br>
 <fieldset style="background-color: white">
         <form action="/book_insert" method="post">
-            <table border="1px">
-                <tr>
-                    <br>
-                    <td>Book title</td>
-                    <td><input type="text" name="Book_title" required></td>
-                </tr>
-                <tr>
-                    <td>Language code</td>
-                    <td><input type="text" name="Language_code"></td>
-                </tr>
-                <!-- <tr>
-                    <td>Price</td>
-                    <td><input type="number" step="any" name="price"></td>
-                </tr> -->
-                <tr>
-                    <td>Number Of pages</td>
-                    <td><input type="number" name="Num_pages"></td>
-                </tr>
-                <!-- <tr>
-                    <td>Expiry</td>
-                    <td><input type="date" name="expiry"></td>
-                </tr> -->
-                <tr>
-                    <td>Publication date</td>
-                    <td><input type="date" name="Publication_date"></td>
-                </tr>
-                <!-- <tr>
-                    <td>Stock</td>
-                    <td><input type="tel" maxlength="3" name="stock"></td>
-                </tr> -->
-                <tr>
-                    <td>Publisher</td>
-                    <td><input type="text" name="Publisher"></td>
-                </tr>
-                <tr>
-                    <td>Book quantity</td>
-                    <td><input type="tel" maxlength="3" name="Book_quantity"></td>
-                </tr>
-                <tr>
-                    <td>Book price</td>
-                    <td><input type="number" step="any" name="Book_price"></td>
-                </tr>
-                <tr>
-                    <td><input type="submit" value="Save"></td>
-                    <td><input type="reset" value="Refresh"></td>
-                </tr>
-            </table>
+
+          <table border="1px">
+            <tr>
+                <td>Book Title</td>
+                <td><input type="text" name="title" required></td>
+            </tr>
+            <tr>
+                <td>Authors</td>
+                <td><input type="text" name="authors" required></td>
+            </tr>
+            <tr>
+                <td>Average Rating</td>
+                <td><input type="number" step="0.01" name="average_rating" required></td>
+            </tr>
+            <tr>
+                <td>ISBN</td>
+                <td><input type="text" name="isbn" required></td>
+            </tr>
+            <tr>
+                <td>ISBN-13</td>
+                <td><input type="text" name="isbn13" required></td>
+            </tr>
+            <tr>
+                <td>Language Code</td>
+                <td><input type="text" name="language_code" required></td>
+            </tr>
+            <tr>
+                <td>Number of Pages</td>
+                <td><input type="number" name="num_pages" required></td>
+            </tr>
+            <tr>
+                <td>Ratings Count</td>
+                <td><input type="number" name="ratings_count" required></td>
+            </tr>
+            <tr>
+                <td>Text Reviews Count</td>
+                <td><input type="number" name="text_reviews_count" required></td>
+            </tr>
+            <tr>
+                <td>Publication Date</td>
+                <td><input type="date" name="publication_date" required></td>
+            </tr>
+            <tr>
+                <td>Publisher</td>
+                <td><input type="text" name="publisher" required></td>
+            </tr>
+
+            
+            
+            
+        </table>
+<br>
+        <input type="submit" value="Save">
+            <input type="reset" value="Clear">
+
         </form>
+        <tr>
+                
+            
+        </tr>
+             
     </fieldset>
 </body>
 

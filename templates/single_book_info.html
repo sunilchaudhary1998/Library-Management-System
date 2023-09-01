@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>www.csjk.medico.com</title>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/navv.css')}}">
+        
+    </head>
+
+<!-- -------------------------------------------- -->
+
+<div class="topnav">
+    <a class="active" href="/logout_drug">Logout</a>
+    <a href="/all_book_details">Entire books Details</a>
+    <a class="active" href="/index">Home</a>
+</div><br>
+
+
+<div style="vertical-align:top;font-size:20px">
+    <div style="color:black; text-align:right;">
+
+       
+        <img style="padding-right: 5px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+        " src="/static/images/blue.jpg">
+
+    </div>
+</div><br><br>
+
+
+<!-- ------------------------------------- -->
+
+
+<body style="background-color:#ACDDDE">
+        
+    <marquee scrollamount="4" bgcolor="white" direction="up" hspace="500" behavior='slide' scrolldelay="">
+    <h3><b><center>Single Drug Info</center></b></h3></marquee><br>
+    
+        
+
+        
+<br><br><br>  
+<fieldset style="background-color: white">
+    <form action=""> 
+        <table border="1px">
+            <tr>
+                <br>
+                <td style="background-color: yellow;"><b>Book Id</b></td>
+                <td style="background-color: yellow;"><b>Book Title</b></td>
+                <td style="background-color: yellow;"><b>Language Code</b></td>
+                <td style="background-color: yellow;"><b>Publisher</b></td>
+                <td style="background-color: yellow;"><b>Action</b></td>
+                <td style="background-color: yellow;"><b>Issue Book</b></td>
+                    <center>&#x2212</center></b></td>
+            </tr>
+            {% for i in ic %}
+            <tr>
+                <td>{{i[0]}}</td>
+                <td>{{i[1]}}</td>
+                <td>{{i[6]}}</td>
+                <td>{{i[11]}}</td>
+        
+                <td><a href="/book_edit?id={{i[0]}}"><i>edit</i></a></td>
+                <td><a href="/book_delete?id={{i[0]}}"><i>delete</i></a></td> 
+                
+  
+             </tr>
+             {% endfor %}
+        
+        </form>
+    </table>
+</fieldset>
+
+
+
+</body>
+
+</html>
