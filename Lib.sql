@@ -1,4 +1,4 @@
-# Just Run This file in sql server once and forget it:-
+--Just Run This file in sql server once and forget it:-
 
 
 ---data base 
