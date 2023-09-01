@@ -15,9 +15,9 @@ https://drive.google.com/file/d/1_HNBVmLkCWLJ5xyCOBL3wEOC4E0pnVjd/view?usp=drive
 • It is a Web Based Application for saving details of new New Book arrived in the shop 
   or can be used to import Books from API link. 
 
-• As well as can be used to search for Whether a Books is present or not available in shop.
+• As well as can be used to search for Whether a particular Book is present at library or not.
 
-• It store details of members whom Books have been issued at Rent.
+• It can store details of Members whom Books have been issued at Rent.
 ~~~
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
