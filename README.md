@@ -130,13 +130,16 @@ CREATE TABLE Member
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 ~~~
-[ all books details SCreen ]
+[ all books details Screen ]
 
 1) in all book details page there is a button to import all books from API.
 2) in action button there is a function to edit details of books.
+3) There is a Add New Book Button by which we can enter new book into data base manually as like api button.
+4) If any student come and ask for book we can check whether that book is available in our libray by Search Single Book Info button
 ~~~
 
-<img width="960" alt="image" src="https://github.com/sunilchaudhary1998/Library-Management-System/assets/107506936/264051de-d46c-40ea-86d3-262b9e88b70a">
+<img width="960" alt="image" src="https://github.com/sunilchaudhary1998/Library-Management-System/assets/107506936/dde9e091-8cb9-4329-8fe7-282b34f1378e">
+
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -164,6 +167,26 @@ CREATE TABLE Member
 ~~~
 <img width="960" alt="image" src="https://github.com/sunilchaudhary1998/Library-Management-System/assets/107506936/b6885c33-8af1-4ccf-a44e-09082a9df6e3">
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+~~~
+[ Single Book Info Check ]
 
+1) If any student come and ask for book we can check whether that book is available in our libray by Search Single Book Info button
+~~~
+<img width="960" alt="image" src="https://github.com/sunilchaudhary1998/Library-Management-System/assets/107506936/cae2af1e-5589-4547-a915-956da184e42a">
+
+
+<img width="960" alt="image" src="https://github.com/sunilchaudhary1998/Library-Management-System/assets/107506936/3b0ba8c9-f65b-4857-9562-f29c2dc28d75">
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+~~~
+[ Single Book Information ]
+
+1) Checking and Retrieving details related to any one book that is present in library or not
+2) so that we can recomend to customer
+~~~
+<img width="960" alt="image" src="https://github.com/sunilchaudhary1998/Library-Management-System/assets/107506936/3eb268a2-ccbb-4dfa-afe4-308be8343943">
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
