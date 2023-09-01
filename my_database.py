@@ -8,9 +8,9 @@ import pypyodbc as odbc
 def connect():
     DRIVER = 'SQL Server'
     database = 'Library'
-    Server = 'LAPTOP-Q9O8INGS\SQLEXPRESS'
-    username = 'your_username'
-    password = 'your_password'
+    Server = 'LAPTOP-Q9O8INGS\SQLEXPRESS'      #take your server name
+    #username = 'your_username'
+    #password = 'your_password'
     Port = 'myport'
 
     return odbc.connect(f'''DRIVER={DRIVER};
